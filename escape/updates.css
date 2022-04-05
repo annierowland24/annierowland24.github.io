@@ -1,0 +1,162 @@
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 60px;
+}
+
+body {
+    background-color: #e2e2e2;
+}
+
+#back {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+    background-color: rgb(94, 207, 252);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#answer {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    width: 50%;
+    background-color: rgb(94, 207, 252);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#newDigit {
+    width: 150px;
+    height: 90px;
+    visibility: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: absolute;
+    width: 50%;
+    background-color: rgb(94, 207, 252);
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: auto;
+    top: 200px;
+    height: auto;
+    position: relative;
+}
+
+#updates_1 {
+    position: relative;
+    top: 40px;
+}
+
+#updates_2 {
+    position: relative;
+    top: 50px;
+}
+
+#updates_3 {
+    position: relative;
+    top: 50px;
+}
+
+#updates_1_button {
+    height: auto;
+    width: auto;
+    margin-left: 350px;
+    margin-right: 300px;
+    position: absolute;
+    top: 930px;
+    z-index: 1;
+}
+
+#updates_2_button {
+    height: auto;
+    width: auto;
+    margin-left: 530px;
+    margin-right: 300px;
+    position: relative;
+    top: -100px;
+    z-index: 1;
+}
+
+#updates_3_button {
+    height: auto;
+    width: auto;
+    left: 350px;
+    position: absolute;
+    top: 325px;
+    bottom: 500px;
+    z-index: 1;
+}
+
+#main_txt{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+}
+
+#back_1 {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    width: 50%;
+    background-color: rgb(94, 207, 252);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#back {
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+    width: 50%;
+    background-color: rgb(94, 207, 252);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.answer_txt{
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        position: relative;
+        font-weight: bold;
+}
+
+.body_txt{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    inline-size: 900px;
+    overflow-wrap: break-word;
+    hyphens: manual;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#body_txt{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    inline-size: 900px;
+    overflow-wrap: break-word;
+    hyphens: manual;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+

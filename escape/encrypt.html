@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="decrypt.css">
+    <title> Exposed private data </title>
+  </head>
+  <body>
+    <h1> Task one </h1>
+<!------------------------Buttons-------------------------->
+    <button id="back" class="button_center" onclick="window.location.href='index.html';"> Take me back to the room </style></button></br>
+    <button id="number" class="button_center" onclick="tryNumber()"> I've got the number </button></br>
+    <button id="next" onclick="window.location.href='encrypt_answer.html';"> Next </button></br>
+
+    <div class="body_txt">
+       <b> Welcome to your first task. </b></br> </br>
+        You must decipher the message below using the substitution cipher found in the room previously. If successful, you will find the first number to the four digit code you need in order to escape the room.
+        
+    </div></br></br>
+    <!------ cipher image ----->
+    
+      <img id="cipher" src="images/cipher.png">
+
+    <!--------- is it the right number? function -------->
+
+    </div>
+<script>
+    function tryNumber() {
+      var tryNumber = prompt("What number did you decipher? All lowercase please");
+      if (tryNumber == "zero"){
+          Lock = "Correct";
+          alert("Well done. That was the right number, click the 'Next' button to continue.");
+          checkAnswer();
+      }
+      else {
+         alert ("Looks like that was the wrong code. Try again.")
+      }
+  }
+
+  function checkAnswer() {
+        if (Lock == "Correct") {
+                document.getElementById("next").style.visibility = "visible";
+            }    
+            else {
+                alert ("Looks like you haven't solved the vunerability. Guess you'll have to keep looking.");
+            }
+        }
+</script>
+  </body>
+</html>

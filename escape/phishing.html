@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+<link rel="stylesheet" href="phishing.css">
+<link rel="answer" href="phishing_answer.html">
+  </head>
+  <body>
+
+    <h1> Task three </h1>
+
+    <!--------------------BUTTONS------------------------>
+        <button id="back" class="center_button" onclick="window.location.href='index.html';"> Take me back to the room </button> </br> 
+        <button id="answer" class="center_button" onclick="tryCode()"> I've cracked the code </button> </br>
+        <button id="newDigit" class="center_button" onclick="window.location.href='phishing_answer.html';"> Get the third digit </button>
+    <!-----------------------BODY------------------------>    
+        <!------------------------TEXT ---------------------->
+
+        <div id="body_txt">In this task, you have been presented with a collection of emails from the inbox of an Andrew Stuart. You must look though them and identify the phishing emails, you have three to find. </br> </br>
+
+          Each email has an ‘Email ID’ at the top of the page, use these in order to unlock the next digit. Once you think you have all three, click on the ‘I’ve got the code’ button and enter them in the popup box. Make sure they’re all in order and in capital letters. </br> </br>
+          
+          <b>Good luck, you need this digit if you ever want to leave the room. </b>
+        </div>
+    <!-----------------------IMAGES---------------------->
+
+    <img src="images/phishing_1.png" class="center"/>
+    <img src="images/phishing_2.png" class="center"/>
+    <img src="images/phishing_4.png" class="center"/>
+    <img src="images/phishing_5.png" class="center"/>
+    <img src="images/phishing_3.png" class="center"/>
+
+    <!-----------------------JAVA------------------------>
+    <script>
+
+    /* VARIABLES */
+    var Code = "wrong";
+
+    /* FUNCTIONS */
+
+    function tryCode() {
+        console.log("You tried a code");
+      var tryCode = prompt("What do you think the code is? All uppercase please.");
+      if (tryCode == "ABCDIJ"){
+          Code = "correct";
+          alert("Well done. You figured out the risky emails. Click the 'Get the third digit' button to find the third number to the passcode.");
+          checkCode();
+      }
+      else {
+         alert ("Looks like that was the wrong code. Have another look.");
+      }
+  }
+
+     function checkCode() {
+        if (Code == "correct") {
+                document.getElementById("newDigit").style.visibility = "visible";
+            }    
+            else {
+                alert ("Looks like you haven't cracked the code from the emails. Guess you'll have to keep trying.");
+            }
+        }
+    </script>
+      </body>

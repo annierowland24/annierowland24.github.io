@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="updates.css">
+    <link rel="answer" href="updates_answer.html">
+  </head>
+  <body>
+
+    <h1> Task four </h1>
+
+<!--------------------------BUTTONS---------------------->
+        <button id="back" onclick="window.location.href='index.html';"> Take me back to the room </button></br>
+        <button id="newDigit" onclick="window.location.href='updates_answer';"> Get the next digit </button>
+
+        <!------------------------TEXT--------------------------->
+
+        <div class="body_txt"> You’re trying to use the computer to find any clues but all the apps you’re using keep crashing? You’ve opened the settings to see is there’s any reason for it but nothings standing out, you’re going to have to look deeper into it.</br> </br>
+
+          To find the last digit to the code, you must identify the vulnerability within the settings of this computer. Click through the settings to see if you can work it out.</br></br>
+          
+          Something in here is the reason the computer is seemingly unusable. Find it and you’re one step closer to getting out of this room!  
+        </div>
+
+        <!------------------------PICTURES----------------------->
+
+    <img id="updates_1" src="images/updates_1.png" class="center" onclick="window.location.href='updates_fake_click.html'">
+    <img id="updates_1_button" src="images/updates_1_button.png" onclick="window.location.href='updates_2.html'">
+
+<!--------------------------JAVA------------------------->
+    <script>
+
+    /* VARIABLES */
+    var Answer = "wrong";
+
+    /* FUNCTIONS */
+
+    function tryAnswer() {
+        console.log("You guessed an answer");
+      var tryAnswer = prompt("What do you think the vunerability is? All lower case letters please.");
+      if (tryAnswer == "software updates"){
+          Answer = "correct";
+          alert("Well done. You identified the vunerability. Click the 'Get the next digit' button to find the final number to the passcode.");
+          checkAnswer();
+      }
+      else {
+         alert ("Looks like that wasn't the vunerability. Have another go.");
+      }
+  }
+
+     function checkAnswer() {
+        if (Answer == "correct") {
+                document.getElementById("newDigit").style.visibility = "visible";
+            }    
+            else {
+                alert ("Looks like you haven't solved the vunerability. Guess you'll have to keep looking.");
+            }
+        }
+    </script>
+      </body>
+
+      

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html class="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="finished" href="finished.html">
+    <link rel="encrypt" href="encrypt.html">
+    <link rel="password" href="password.html">
+  </head>
+  <body>
+      <home>
+    
+<!------Images------>
+    <div id="room">
+      <img id="Door" src="drawings/Door.png" onclick="tryDoor()">
+      <img id="Doorknob" src="drawings/Doorknob.png" onclick="tryDoorKnob()">
+      <img id="Key" src="images/Key.png" onclick="pickupKey()">
+      <img id="Lock" src="drawings/Lock2.png" onclick="tryLock()">
+      <img id="Desk" src="drawings/Desk.png">
+      <img id="Desktop" src="drawings/desktop_draw.png" onclick="location.href='phishing.html';">
+      <img id="Phone" src="drawings/iPhone.png" onclick="location.href='password.html';">
+      <img id="Table" src="drawings/table_draw.png">
+      <img id="Printer" src="drawings/Printer_draw.png" onclick="tryPrinter()">
+      <img id="Bin" src="drawings/Bin_Draw.png"         onclick="location.href='encrypt.html';">
+      <img id="Laptop" src="drawings/laptop_draw.png" onclick="location.href='updates.html';">
+      <img id="Board" src="images/read_me.png" onclick="location.href='readMe.html';">
+
+
+<!---- Buttons --->
+
+<button id="escape" class="center" onclick="window.location.href = 'finished.html';"> Escape this room!</button>
+
+<!----- Functions below ----->
+    <script>
+//Variables//
+        var hasKey = false; //You dont have the key when you enter the room//
+    function tryDoor() {
+        console.log("You clicked the door");
+    }
+        var doorknob = "Locked";
+        var Lock = "Locked";
+
+//Funcitons//
+
+    function tryDoorKnob() {
+        console.log("You clicked the doorknob");
+        if (hasKey == true) {
+            doorknob = "unlocked";
+            alert("You use to key to unlock the first lock. It seems to have worked but the door still won't move. What now?");
+            checkRoom();
+        }
+        else {
+            alert("It seems to be locked, looks like I need a key!");
+        }
+    }
+
+    function pickupKey() {
+        console.log("You ");
+        hasKey = true;
+        alert("A key? You should pick it up, it might come in handy later on.");
+        document.getElementById("Key").style.display = "none";
+    }
+
+    function checkRoom() {
+        if (doorknob == "unlocked") {
+            if (Lock == "unlocked") {
+
+                document.getElementById("escape").style.visibility = "visible";
+
+            } else {
+                alert ("You push the door but somethings stopping the door from opening. It looks like you need a code to unlock the top lock. There MUST be something in the room to help you!");
+            }  
+        }     else {
+                alert ("You try to turn the doorknob but it's still locked, looks like you need a key!")
+            }
+    }
+
+    function tryLock() {
+        console.log("You clicked the lock");
+        var lockTry = prompt("This lock needs a code, it seems like a four digit code. Do you know what it is?");
+        if (lockTry == "0324"){
+            Lock = "unlocked";
+            alert("The lock has opened! You can finally escape!");
+            checkRoom();
+        }
+        else {
+           alert ("You pull on the lock but it's still closed tighly. You must have tried the wrong code!")
+        }
+    }
+
+    function tryDesktop() {
+        console.log("You clicked the desktop");
+    }
+
+    function tryPhone() {
+        console.log("You clicked the phone");
+    }
+
+    function tryPrinter() {
+        console.log("You clicked the printer");
+        var clickPrinter = alert("Oh, something's been printed. It looks like a cipher of some kind. You better pick it up, it could prove useful!");
+    }
+
+    function tryBin() {
+        onclick="location.href='escape/encrypt.html';"
+    }
+    </script>
+    </div>
+</home>
+  </body>
+</html>
